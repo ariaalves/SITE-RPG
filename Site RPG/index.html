@@ -3,15 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 </head>
 <body>
 
     <header>
         <nav class="menu">
-            <img src="" alt=""><!--Aqui vai uma logo-->
-        </nav>
+            <ul class="menu-links">
+                <li><a href="index.html">Home</a></li>
+                <li> <a href="Sobre.html">Sobre</a></li>
+                <li><a href="login.html">Entrar</a></li>
+                <li><a href="cadastro.html">Cadastrar</a></li>
+            </ul>
+          </nav>
     </header>
+    <section class="logo">
+        <img src="img/logo-drungeons.png" alt="">
+        <div class="title-container">
+            <h1>Drungeons</h1>
+            <h2>Welcome, Masters!</h2>
+        </div>
+        
+    </section>
     <section>
         <div>
             <h1></h1><!--Fazer uma chamada para ação(login e cadastro)-->
@@ -56,17 +76,20 @@
         </section>
     </article>
     <footer>
-        <!--sobre, fale conosco, termos e condições-->
-        <a href="sobre.html">Sobre</a>
-        <a href="">Fale Conosco</a>
-        <img src="" alt=""><!--colocar logo com copyright-->
-        <a href="">Termos e Condições</a>
-        <a href="">Discord
-            <i></i>
-        </a>
-        <a href="">GitHub
-            <i></i>
-        </a>
+        <div class="footer-logo">
+            <img src="img/logo-drungeons.png" alt="Logo do site">
+            <div class="title-logo-footer">
+                <h2>Drungeons</h2>
+                <p>&copy; 2025 Drungeons. Todos os direitos reservados.</p>
+            </div>
+        </div>
+        <ul class="footer-links">
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="">Fale Conosco</a></li>
+            <li><a href="">Termos e Condições</a></li>
+            <li><a href="">Discord <i class="icon-discord"></i></a></li>
+            <li><a href="">GitHub <i class="icon-github"></i></a></li>
+        </ul>
     </footer>
     
 </body>
