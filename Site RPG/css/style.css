@@ -1,16 +1,180 @@
 * {
-    margin: 0;
-    padding: 10px;
-    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Roboto", sans-serif;
+}
+
+.menu{
+    background-color: #923828;
+    padding: 20px 100px;
+    display: flex;
+    justify-content:flex-end;
+}
+
+.menu-links{
+    list-style: none;
+    display: flex;
+    gap: 40px;
 }
 
 
-h1,
-h2,
-p,
-strong,
-h3,
-a {
-    color: #000000;
-    text-decoration:none;
+.menu-links a{
+    text-decoration: none;
+    color: #dedede;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+.menu-links a:hover{
+    color: #1E1E1E;
+    background-color:  #e7e6e6; 
+    border-radius: 5px;
+}
+
+.logo{
+    background-color: #e7e6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 50vh;
+}
+
+.title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo img{
+    max-width: 300px;
+    height: auto;
+}
+
+.logo h1{
+    color: #100f0f;
+    font-size: 70px;
+    font-weight: 800;
+}
+
+.logo h2{
+    font-size: 50px;
+    color: #923828;
+    font-weight: 400;
+}
+
+.objetivo{
+    background-color: #923828;
+    color:  #fcfbfb;
+    margin: 0 auto; 
+    padding: 80px 300px; 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.objetivo section{
+    flex: 1;
+}
+
+.objetivo h2{
+    font-size: 55px;
+    margin-bottom: 30px
+}
+
+.objetivo p{
+    font-size: 16px; 
+    line-height: 1.6; 
+    margin-bottom: 15px; 
+    max-width: 650px
+}
+
+.objetivo img{
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+   border: 4px solid #d4d4d4;
+}
+
+.equipe{
+    background-color:  #e7e6e6;
+    color:  #fcfbfb;
+    margin: 0 auto; 
+    padding: 60px 300px; 
+    height: 50vh;
+    color:  #100f0f;
+}
+
+.equipe h2{
+    font-size: 55px;
+    margin-bottom: 50px
+}
+
+.container-equipe{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+
+.equipe-item{
+    text-align: center;
+}
+
+.equipe-item img{
+    max-width: 300px;
+    height: auto;
+    max-height: 300px;
+    border-radius: 10px; /* Bordas arredondadas opcionais */
+    border: 2px solid #100f0f; /* Adiciona uma borda */
+}
+
+.equipe-item h3{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+footer {
+    background-color: #323131; /* Cor de fundo */
+    color: #fcfbfb; /* Cor do texto */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Mantém espaçamento entre links e logo */
+    padding: 30px 300px;
+}
+
+
+.footer-links {
+    list-style: none; 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+.footer-links a {
+    color: #fcfbfb;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.title-logo-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
