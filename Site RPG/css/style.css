@@ -178,3 +178,21 @@ footer {
     flex-direction: column;
     gap: 10px;
 }
+
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
