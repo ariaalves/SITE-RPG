@@ -17,8 +17,7 @@
             </ul>
           </nav>
     </header>
-    <div class="container">
-        <h2>Cadastro</h2>
+    <div class="container-form">
         <form id="registerForm">
             <label for="name">Nome:</label>
             <input type="text" id="name" required>
@@ -37,12 +36,13 @@
             <label for="birthday">Data de Nascimento:</label>
             <input type="date" id="birthday" required>
 
-            <label>
-                <input type="checkbox" id="terms"> Aceito os termos
-            </label>
+            <div class="checkbox">
+                <input type="checkbox" id="terms">
+                <label>Aceito os termos e condições</label>
+            </div>
 
             <button type="submit" id="registerBtn" disabled>Cadastrar</button>
-            <p id="message"></p>
+
         </form>
     </div>
     <footer>

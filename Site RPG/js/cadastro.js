@@ -15,14 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const cpf = document.getElementById("cpf").value.trim();
         const password = document.getElementById("password").value;
         const birthday = document.getElementById("birthday").value;
-
-        const emailError = document.getElementById("emailError");
-        const cpfError = document.getElementById("cpfError");
-        const message = document.getElementById("message");
-
-        emailError.textContent = "";
-        cpfError.textContent = "";
-        message.textContent = "";
+   
 
         try {
             const response = await fetch("https://go-wash-api.onrender.com/api/user", {
@@ -39,28 +32,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 }),
             });
 
-            const data = await response.json();
+            const responseData = await response.json();
 
             if (!response.ok) {
-                if (data.message.includes("email")) {
-                    emailError.textContent = "E-mail já cadastrado";
+                const errorMessage = responseData.message || "Erro ao processar a solicitação.";
+                if (response.status === 422) {
+                    throw new Error("Usuário já cadastrado! Tente novamente.");
+                } else {
+                    throw new Error(errorMessage);
                 }
-                if (data.message.includes("cpf")) {
-                    cpfError.textContent = "CPF já cadastrado";
-                }
-                return;
             }
 
-            message.textContent = "Cadastro realizado com sucesso!";
-            message.style.color = "green";
-
-    
+            alert("Cadastro realizado com sucesso!");
             form.reset();
             registerBtn.disabled = true;
 
         } catch (error) {
-            message.textContent = "Erro ao cadastrar. Tente novamente.";
-            message.style.color = "red";
+            alert(error.message);  
         }
     });
 });

@@ -208,20 +208,75 @@ footer {
     gap: 10px;
 }
 
-
-.container {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    min-height: 100px;
-    display: flex;
-    flex-direction: column;
-
+.container-form{
+  width: auto;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px; 
+  background-color: #e7e6e6;
+  color: #fcfbfb;
 }
 
 
-.error {
+.container-form form{
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid #393939;
+  border-radius: 5px;
+  background-color:#696868;
+}
+
+.container-form h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container-form label{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.container-form input{
+    width: 380px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #302f2f;
+    background-color: #eaeaea;
+}
+
+.image-container img{
+    max-width: 400px;
+    height: auto;
+}
+
+.checkbox {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+}
+  
+  .checkbox input {
+    width: auto;
+  }
+
+  .container-form button{
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .error {
     color: red;
-    font-size: 12px;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
 }
 
