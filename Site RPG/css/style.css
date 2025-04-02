@@ -281,3 +281,43 @@ footer {
     margin-top: 5px;
 }
 
+.D20 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.D20 img {
+    max-width: 400px;
+    height: 400px;
+}
+
+.login {
+    display: flex;
+    background-color: #e6dfdf;
+    max-width: 1000px;
+}
+
+.login h1 {
+    font-size: 32px;
+}
+
+.login div {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 20px; 
+    justify-content: center;
+}
+
+.login button {
+    background: #73afc5;
+    font-size: 14px;
+    font-weight: 600;
+    outline: 2px solid #000;
+    width: 120px;
+    height: 50px;
+    border-radius: 50px;
+    border-style: none;
+}
+
