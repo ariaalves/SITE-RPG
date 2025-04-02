@@ -154,8 +154,8 @@
     max-width: 300px;
     height: auto;
     max-height: 300px;
-    border-radius: 10px; /* Bordas arredondadas opcionais */
-    border: 2px solid #100f0f; /* Adiciona uma borda */
+    border-radius: 10px;
+    border: 2px solid #100f0f;
 }
 
 .equipe-item h3{
@@ -164,11 +164,11 @@
 }
 
 footer {
-    background-color: #323131; /* Cor de fundo */
-    color: #fcfbfb; /* Cor do texto */
+    background-color: #323131;
+    color: #fcfbfb; 
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Mantém espaçamento entre links e logo */
+    justify-content: space-between;
     padding: 30px 300px;
 }
 
@@ -316,7 +316,7 @@ hr {
 }
 
 button {
-    background: #73afc5;
+    background: #923828;
     font-size: 14px;
     font-weight: 600;
     outline: 2px solid #000;
@@ -325,10 +325,12 @@ button {
     border-radius: 50px;
     border: none;
     cursor: pointer;
+    color: #ffffff;
 }
 
 .conta {
     background: #fff;
+    color: #000;
 }
 
 .dado {
@@ -342,3 +344,6 @@ button {
     height: 400px;
 }
 
+.cadastrar {
+    background: #923828;
+}
