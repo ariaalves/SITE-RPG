@@ -96,10 +96,10 @@
     background-color: #923828;
     color:  #fcfbfb;
     margin: 0 auto; 
-    padding: 80px 300px; 
+    padding: 80px 200px; 
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
 }
 
 .objetivo section{
@@ -130,8 +130,8 @@
     background-color:  #e7e6e6;
     color:  #fcfbfb;
     margin: 0 auto; 
-    padding: 60px 300px; 
-    height: 50vh;
+    padding: 60px 200px; 
+    height: auto;
     color:  #100f0f;
 }
 
@@ -211,7 +211,7 @@ footer {
 
 .container-form{
   width: auto;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -315,7 +315,7 @@ hr {
     margin-top: 20px;
 }
 
-button {
+.btn {
     background: #923828;
     font-size: 14px;
     font-weight: 600;
@@ -330,6 +330,14 @@ button {
 
 .conta {
     background: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    outline: 2px solid #000;
+    width: 120px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
     color: #000;
 }
 
@@ -344,6 +352,12 @@ button {
     height: 400px;
 }
 
-.cadastrar {
-    background: #923828;
+.cadastrar{
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+.cadastrar:enabled{
+    background-color:#923828;
+    color: #e7e6e6;
 }
