@@ -361,3 +361,30 @@ hr {
     background-color:#923828;
     color: #e7e6e6;
 }
+
+table{
+    color: #595c62;
+    border:  2px solid #595c62;
+    margin-top: 20px;
+    width: 50%;
+}
+
+td{
+  border-right: 2px solid #595c62;
+  padding:1em;
+}
+
+th{
+    border-right:  2px solid #595c62;
+}
+
+#acoes{
+    border-right: none
+}
+
+.table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
