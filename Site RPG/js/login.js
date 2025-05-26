@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.getElementById("loginBtn").addEventListener("click",async () => {
     const form = document.getElementById("loginForm");
 
     form.addEventListener("submit", async (e) => {
@@ -18,14 +18,30 @@ document.addEventListener("DOMContentLoaded", () => {
                 }),
             });
 
-            const responseData = await response.json();
 
-            if (!response.ok) {
-                    throw new Error(responseData.message || "Erro ao fazer login!") 
+            if (response.ok){ 
+                const responseData = await response.json();   
+                alert("Login feito com sucesso!");
+                localStorage.setItem('userData', JSON.stringify(responseData));
+                getUserData()
+                window.location.href = "endereco.html"
+                // form.reset();
+
             }
 
-            alert("Login feito com sucesso!");
-            form.reset();
+            function getUserData(){
+                let user = JSON.parse(localStorage.getItem("userData"))
+                console.log(user.access_token)
+            }
+           
+
+            // if (!response.ok) {
+            //         throw new Error(responseData.message || "Erro ao fazer login!")
+                    
+            // }
+
+
+           
 
         } catch (error) {
             alert(error.message);  
