@@ -16,20 +16,22 @@ async function carregarEnderecos() {
         });
 
         if (response.ok) {
-            const enderecos = await response.json();
+            const resposta = await response.json();
+            const enderecos = resposta.data;
+
             const tabela = document.querySelector("#tabelaEnderecos tbody");
             tabela.innerHTML = "";
 
             enderecos.forEach((endereco) => {
                 const linha = document.createElement("tr");
                 linha.innerHTML = `
-                    <td>${endereco.titulo}</td>
+                    <td>${endereco.title}</td>
                     <td>${endereco.cep}</td>
-                    <td>${endereco.endereco}</td>
-                    <td>${endereco.numero}</td>
+                    <td>${endereco.address}</td>
+                    <td>${endereco.number}</td>
                     <td>
-                        <button onclick="atualizarEndereco('${endereco.id}')">Atualizar</button>
-                        <button onclick="deletarEndereco('${endereco.id}')">Deletar</button>
+                        <button onclick="atualizarEndereco('${endereco.id}')" class="btn btn-outline-primary">Atualizar</button>
+                        <button onclick="deletarEndereco('${endereco.id}')" class="btn btn-outline-danger">Deletar</button>
                     </td>
                 `;
                 tabela.appendChild(linha);
