@@ -430,4 +430,15 @@ table {
 #adressBtn:hover {
     background-color: #702d20;
 }
+#formEndereco{
+    background-color: #e7e6e6;
+}
 
+.form-control ,.form-label{
+    margin-left: 20px;
+}
+
+#endereco{
+    max-width: 680px;
+    margin-left: 30px;
+}

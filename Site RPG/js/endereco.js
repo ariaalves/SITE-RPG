@@ -45,6 +45,61 @@ async function carregarEnderecos() {
     }
 }
 
+async function deletarEndereco(id) {
+    const user = JSON.parse(localStorage.getItem("userData"));
+    if (!user || !user.access_token) {
+        alert("Usuário não autenticado.");
+        return;
+    }
+
+    if (!confirm("Tem certeza que deseja deletar este endereço?")) return;
+
+    try {
+        const response = await fetch(`https://go-wash-api.onrender.com/api/auth/address/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Authorization": `Bearer ${user.access_token}`
+            }
+        });
+
+        if (response.ok) {
+            alert("Endereço deletado com sucesso!");
+            carregarEnderecos();
+        } else {
+            alert("Erro ao deletar endereço.");
+        }
+    } catch (error) {
+        console.error("Erro ao deletar:", error);
+        alert("Erro inesperado.");
+    }
+}
+
+
+function atualizarEndereco(id) {
+    const user = JSON.parse(localStorage.getItem("userData"));
+    if (!user || !user.access_token) {
+        alert("Usuário não autenticado.");
+        return;
+    }
+
+    fetch(`https://go-wash-api.onrender.com/api/auth/address/${id}`, {
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${user.access_token}`
+        }
+    })
+        .then(response => response.json())
+        .then(data => {
+            localStorage.setItem("enderecoEdit", JSON.stringify(data.data));
+            window.location.href = "editarendereco.html";
+        })
+        .catch(err => {
+            console.error("Erro ao buscar endereço:", err);
+            alert("Erro ao carregar dados do endereço.");
+        });
+}
+
+
 document.addEventListener("DOMContentLoaded", carregarEnderecos);
 
 document.getElementById("adressBtn").addEventListener("click", () => {
