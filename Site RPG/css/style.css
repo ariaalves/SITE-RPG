@@ -362,51 +362,6 @@ hr {
     color: #e7e6e6;
 }
 
-table{
-    color: #595c62;
-    border:  2px solid #595c62;
-    margin-top: 20px;
-    width: 50%;
-}
-
-td{
-  border-right: 2px solid #595c62;
-  padding:1em;
-}
-
-th{
-    border-right:  2px solid #595c62;
-}
-
-#acoes{
-    border-right: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #923828;
-    color: white;
-
-}
-
-.table {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center;
-    padding: 30px 0;
-    border-collapse: collapse;
-}
-
-
-table {
-    border-collapse: collapse;
-    color: #000000;
-    border:  2px solid #3b3a3a;
-    margin-top: 20px;
-    width: 50%;
-    max-width: 800px;
-}
-
-
 #tabelaEnderecos tbody tr {
     border: 1px solid #000000;
 }
@@ -444,8 +399,6 @@ tbody {
     max-width: 35%;
     max-height: auto;
     gap: 1px;
-
-
 }
 
 .menu {
@@ -454,5 +407,14 @@ tbody {
 
 #tabelaEnderecos thead th {
     border: 1px solid #000;
-    padding: 0 47.7px;
+    padding: 0 35px;
+}
+
+.btn-outline-primary {
+    margin-right: 10px;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
 }
