@@ -25,7 +25,6 @@ document.getElementById("loginBtn").addEventListener("click",async () => {
                 localStorage.setItem('userData', JSON.stringify(responseData));
                 getUserData()
                 window.location.href = "endereco.html"
-                // form.reset();
 
             }
 
@@ -34,15 +33,6 @@ document.getElementById("loginBtn").addEventListener("click",async () => {
                 console.log(user.access_token)
             }
            
-
-            // if (!response.ok) {
-            //         throw new Error(responseData.message || "Erro ao fazer login!")
-                    
-            // }
-
-
-           
-
         } catch (error) {
             alert(error.message);  
         }

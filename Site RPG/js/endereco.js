@@ -24,7 +24,6 @@ async function carregarEnderecos() {
       const data = await response.json();
       const enderecos = data.data;
 
-      // 🔥 Salvar lista de endereços no localStorage
       localStorage.setItem("enderecos", JSON.stringify(enderecos));
 
       const tabela = document.querySelector("#tabelaEnderecos tbody");
@@ -54,12 +53,12 @@ async function carregarEnderecos() {
 }
 
 function editarEndereco(id) {
-  // 🔍 Buscar a lista salva no localStorage
+ 
   const enderecos = JSON.parse(localStorage.getItem("enderecos")) || [];
   const endereco = enderecos.find(e => e.id === id);
 
   if (endereco) {
-    // ✅ Salva o endereço específico para edição
+
     localStorage.setItem("enderecoEdit", JSON.stringify(endereco));
     window.location.href = "editarendereco.html";
   } else {
@@ -86,7 +85,7 @@ async function deletarEndereco(id) {
 
     if (response.ok) {
       alert("Endereço deletado com sucesso!");
-      carregarEnderecos(); // Atualiza a tabela e o localStorage
+      carregarEnderecos();
     } else {
       alert("Erro ao deletar endereço.");
     }
