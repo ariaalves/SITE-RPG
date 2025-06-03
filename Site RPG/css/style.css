@@ -442,3 +442,13 @@ table {
     max-width: 680px;
     margin-left: 30px;
 }
+
+#salvar_alter{
+    font-size: small;
+    color: #f5f5f5;
+}
+
+#Cancelar_btt{
+    align-items: center;
+    font-size:larger;
+}
